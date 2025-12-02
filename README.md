@@ -1,241 +1,113 @@
-Emergency Room Performance Dashboard (Excel)
+# 🏥 Emergency Room Performance Dashboard (Excel)
 
-A complete end-to-end Emergency Room (ER) Performance Dashboard built using Excel, Power Query, Power Pivot, and DAX.
-This project delivers actionable insights to improve hospital efficiency, patient experience, and operational decision-making.
+A complete end-to-end Emergency Room (ER) Performance Dashboard built using Excel, Power Query, Power Pivot, and DAX. This project delivers actionable insights to improve hospital efficiency, patient experience, and operational decision-making.
 
+---
 
+## 🛑 Problem Statement
 
+Hospitals often struggle to track ER performance due to **unstructured data**, **manual reporting**, and **lack of real-time visibility**.
 
-📌 Problem Statement
+The objective of this project is to build a dynamic, automated Excel dashboard that helps stakeholders monitor key performance indicators (KPIs) such as **patient volume**, **wait time**, **satisfaction**, **timeliness**, and **referral patterns**—enabling faster, data-driven decisions.
 
-Hospitals struggle to track ER performance due to:
+---
 
-- Unstructured data
+## 🛠 Step-by-Step Procedure
 
-- Manual reporting
+### 1. Business Requirement Gathering
+* Identified key KPIs and data points needed by hospital management.
+* Understood operational challenges and reporting needs.
 
-- Lack of real-time visibility
+### 2. Understanding the Dataset
+* Reviewed raw hospital ER data including: patient age, gender, wait time, satisfaction, admission status, referral departments, etc.
 
+### 3. Data Import Using Power Query
+* Pulled raw data into Excel using Power Query.
+* Ensured auto-refresh capability for future data updates.
 
-This project helps stakeholders monitor essential ER KPIs such as:
+### 4. Data Cleaning & Quality Assurance
+* Removed duplicates, fixed formatting issues, standardized data types.
+* Ensured consistency before modeling.
 
-- Patient volume
+### 5. Creating Calendar Table (Power Query)
+* A fully dynamic date table was created to support time-intelligence.
+    > `= List.Dates(#date(2023,01,01), 731, #duration(1,0,0,0))`
 
-- Wait time
+### 6. Data Modeling with Power Pivot
+* Built relationships between fact table and calendar table.
+* Optimized model for fast and accurate calculations.
 
-- Satisfaction
+### 7. DAX Calculations (Custom Columns)
+* **Age Group Classification**
+    > `=IF([Patient Age]>=70,"70-79", IF([Patient Age]>=60,"60-69", IF([Patient Age]>=45,"45-59", IF([Patient Age]>=30,"30-44", IF([Patient Age]>=15,"15-29", IF([Patient Age]>=5,"05-14","0-4"))))))`
+* **Patient Timeliness Classification**
+    > `=IF([Patient Waittime] < 30, "Within Time", "Delay")`
 
-- Timeliness
+### 8. Dashboard Structure & Pivot Table Creation
+* Built pivot tables for each KPI.
+* Structured components for clarity and user-friendly navigation.
 
-- Referral patterns
+### 9. Chart Development & Formatting
+* Created automated visuals including:
+    * Admission Status (Admitted vs Not Admitted)
+    * Age Distribution & Gender Breakdown
+    * Timeliness % (patients seen within 30 minutes)
+    * Department Referral Analysis
+    * Sparkline trends for daily wait time, satisfaction, and patient volume
 
+### 10. Final Dashboard Development
+* Integrated KPIs, charts, and slicers.
+* Applied clean formatting for a professional, hospital-ready view.
+* Ensured everything updates automatically when source data changes.
 
+---
 
+## 🔧 Tools & Techniques Used
 
+* Microsoft Excel
+* Power Query (Importing & Cleaning)
+* Power Pivot (Data Modeling)
+* DAX (Custom Calculations)
+* Pivot Tables
+* Charts & Visualizations
+* Dashboard Layout & UX Optimization
 
-🛠️ Step-by-Step Procedure
+---
 
-1. Business Requirement Gathering
+## 📐 Methods Applied
 
-- Identified key KPIs needed by hospital management.
+* Data Transformation
+* ETL using Power Query
+* Data Modeling
+* DAX-Based Calculations
+* Trend Analysis
+* KPI Design
+* Visual Storytelling
 
-- Understood operational challenges and reporting needs.
+---
 
+## 🔑 Key Insights
 
+* Identified **peak traffic days** where wait times increased significantly.
+* Found that certain **age groups** had a higher rate of admission.
+* **Timeliness metric** showed specific days where performance dropped below the 30-minute target.
+* **Referral patterns** highlighted departments with maximum incoming cases.
 
-2. Understanding the Dataset
+---
 
-- Reviewed raw hospital ER data including:
+## 🎯 Result & Conclusion
 
-- Patient demographics
+The final Excel dashboard provides a clear, automated, and insight-driven view of ER performance. Hospital administrators can now:
 
-- Wait time
+* Identify inefficiencies quickly
+* Track performance trends instantly
+* Make accurate, data-backed decisions
+* Improve patient experience and service quality
 
-- Satisfaction
+---
 
-- Admission status
+## 👤 Contact
 
-- Referral departments
-
-
-
-3. Data Import Using Power Query
-
-- Pulled raw data into Excel using Power Query.
-
-- Enabled auto-refresh for future updates.
-
-
-
-4. Data Cleaning & Quality Assurance
-
-- Removed duplicates
-
-- Fixed formatting issues
-
-- Standardized data types
-
-- Ensured consistency before modeling
-
-
-
-5. Creating Calendar Table (Power Query)
-
-= List.Dates(#date(2023,01,01), 731, #duration(1,0,0,0))
-
-
-
-6. Data Modeling with Power Pivot
-
-- Built relationships between fact and calendar tables.
-
-- Optimized model for fast and accurate calculations.
-
-
-
-7. DAX Calculations
-
-Age Group Classification
-
-=IF([Patient Age]>=70,"70-79",
- IF([Patient Age]>=60,"60-69",
- IF([Patient Age]>=45,"45-59",
- IF([Patient Age]>=30,"30-44",
- IF([Patient Age]>=15,"15-29",
- IF([Patient Age]>=5,"05-14","0-4"))))))
-
-
-Patient Timeliness Classification
-
-=IF([Patient Waittime] < 30, "Within Time", "Delay")
-
-
-
-8. Dashboard Structure & Pivot Table Creation
-
-- Built pivot tables for each KPI.
-
-- Created user-friendly layout with structured components.
-
-
-
-9. Chart Development & Formatting
-
-- Created automated visuals including:
-
-- Admission status
-
-- Patient satisfaction
-
-- Referral trends
-
-- Patient age distributions
-
-- Timeliness performance
-
-
-
-
-📈 Key Insights
-
-- Identified delays in patient processing
-
-- Found bottlenecks in specific departments
-
-- Highlighted age groups with highest ER visits
-
-- Improved data refresh workflow
-
-
-                 
-
-  
-
-
-
-
-✅ Result & Conclusion
-
-This dashboard provides:
-
-- Transparent performance tracking
-
-- Faster decision-making
-
-- Improved patient experience
-
-- Scalable solution for future datasets
-
-    
-
-        
-
-
-
-
-
-
-📦 Tools & Technologies Used
-
-- Excel
-
-- Power Query
-
-- Power Pivot
-
-- DAX
-
-- Data Cleaning & Modeling
-
-- DAX-Based Calculations
-
-- Trend Analysis
-
-- KPI Design
-
-- Visual Storytelling
-
- 
-
-
-
-
-
-🔑 Key Insights
-
-- Identified peak traffic days where wait times increased significantly.
-
-- Certain age groups showed higher admission rates.
-
-- Gender distribution remained balanced.
-
-- Timeliness metric revealed specific low-performance days.
-
-- Referral patterns highlighted departments with maximum incoming cases.
-
-
-
-
-
-🎯 Result & Conclusion
-
-The final Excel dashboard provides a clear, automated, and insight-driven view of ER performance.
-
-Hospital administrators can now:
-
-- Identify inefficiencies quickly
-
-- Track performance trends instantly
-
-- Make accurate, data-backed decisions
-
-- Improve patient experience and service quality
-
-
-
-
-Contact
-
-Krishna Jaiswal  
-📩 Email: krishna250763@gmail.com  
-🔗 LinkedIn: www.linkedin.com/in/krishnaa07
+**Krishna Jaiswal**
+* **Email**: krishna250763@gmail.com
+* **LinkedIn**: [www.linkedin.com/in/krishnaa07](www.linkedin.com/in/krishnaa07)
