@@ -13,6 +13,7 @@ The objective of this project is to build a dynamic, automated Excel dashboard t
 
 
 
+
 🛠 Step-by-Step Procedure
 
 1. Business Requirement Gathering
@@ -22,9 +23,11 @@ The objective of this project is to build a dynamic, automated Excel dashboard t
 - Understood operational challenges and reporting needs.
 
 
+
 2. Understanding the Dataset
 
 Reviewed raw hospital ER data → patient age, gender, wait time, satisfaction, admission status, referral departments, etc.
+
 
 
 3. Data Import Using Power Query
@@ -34,11 +37,13 @@ Reviewed raw hospital ER data → patient age, gender, wait time, satisfaction, 
 - Ensured auto-refresh capability for future data updates.
 
 
+
 4. Data Cleaning & Quality Assurance
 
 - Removed duplicates, fixed formatting issues, standardized data types.
 
 - Ensured consistency before modeling.
+
 
 
 5. Creating Calendar Table (Power Query)
@@ -47,11 +52,14 @@ A fully dynamic date table was created to support time-intelligence.
 
 = List.Dates(#date(2023,01,01), 731, #duration(1,0,0,0))
 
+
+
 6. Data Modeling with Power Pivot
 
 - Built relationships between fact table and calendar table.
 
 - Optimized model for fast and accurate calculations.
+
 
 
 7. DAX Calculations (Custom Columns)
@@ -69,11 +77,14 @@ Patient Timeliness Classification
 
 =IF([Patient Waittime] < 30, "Within Time", "Delay")
 
+
+
 8. Dashboard Structure & Pivot Table Creation
 
 - Built pivot tables for each KPI.
 
 - Structured components for clarity and user-friendly navigation.
+
 
 
 9. Chart Development & Formatting
@@ -93,6 +104,7 @@ Patient Timeliness Classification
 - Sparkline trends for daily wait time, satisfaction, and patient volume
 
 
+
 10. Final Dashboard Development
 
 - Integrated KPIs, charts, and slicers.
@@ -100,6 +112,8 @@ Patient Timeliness Classification
 - Applied clean formatting for a professional, hospital-ready view.
 
 - Ensured everything updates automatically when source data changes.
+
+
 
 
 🔧 Tools & Techniques Used
@@ -119,6 +133,8 @@ Patient Timeliness Classification
 - Dashboard Layout & UX Optimization
 
 
+
+
 📐 Methods Applied
 
 - Data Transformation
@@ -136,6 +152,8 @@ Patient Timeliness Classification
 - Visual Storytelling
 
 
+
+
 🔑 Key Insights
 
 - Identified peak traffic days where wait times increased significantly.
@@ -147,6 +165,8 @@ Patient Timeliness Classification
 - Timeliness metric showed specific days where performance dropped.
 
 - Referral patterns highlighted departments with maximum incoming cases.
+
+
 
 
 🎯 Result & Conclusion
@@ -161,6 +181,7 @@ Hospital administrators can now:
 - Make accurate, data-backed decisions
 
 -Improve patient experience and service quality
+
 
 
 Krishna Jaiswal
