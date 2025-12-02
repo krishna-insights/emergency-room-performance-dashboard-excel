@@ -1,69 +1,85 @@
-Emergency Room Performance Dashboard
+Emergency Room Performance Dashboard (Excel)
 
 A complete end-to-end Emergency Room (ER) Performance Dashboard built using Excel, Power Query, Power Pivot, and DAX.
 This project delivers actionable insights to improve hospital efficiency, patient experience, and operational decision-making.
 
 
 
-Problem Statement
 
-Hospitals often struggle to track ER performance due to unstructured data, manual reporting, and lack of real-time visibility.
+📌 Problem Statement
 
-The objective of this project is to build a dynamic, automated Excel dashboard that helps stakeholders monitor key performance indicators such as:
+Hospitals struggle to track ER performance due to:
 
-Patient volume
+- Unstructured data
 
-Wait time
+- Manual reporting
 
-Satisfaction
-
-Timeliness
-
-Referral patterns
+- Lack of real-time visibility
 
 
-This enables faster and more accurate data-driven decisions.
+This project helps stakeholders monitor essential ER KPIs such as:
+
+- Patient volume
+
+- Wait time
+
+- Satisfaction
+
+- Timeliness
+
+- Referral patterns
 
 
 
 
-Step-by-Step Procedure
+
+🛠️ Step-by-Step Procedure
 
 1. Business Requirement Gathering
 
-Identified key KPIs and data points needed by hospital management.
+- Identified key KPIs needed by hospital management.
 
-Understood operational challenges and reporting needs.
+- Understood operational challenges and reporting needs.
+
 
 
 2. Understanding the Dataset
 
-Reviewed raw hospital ER data including:
-Patient age, gender, wait time, satisfaction, admission status, referral departments, etc.
+- Reviewed raw hospital ER data including:
 
+- Patient demographics
+
+- Wait time
+
+- Satisfaction
+
+- Admission status
+
+- Referral departments
 
 
 
 3. Data Import Using Power Query
 
-Pulled raw data into Excel using Power Query.
+- Pulled raw data into Excel using Power Query.
 
-Ensured auto-refresh capability for future data updates.
+- Enabled auto-refresh for future updates.
 
 
 
 4. Data Cleaning & Quality Assurance
 
-Removed duplicates, fixed formatting issues, standardized data types.
+- Removed duplicates
 
-Ensured consistency before modeling.
+- Fixed formatting issues
 
+- Standardized data types
+
+- Ensured consistency before modeling
 
 
 
 5. Creating Calendar Table (Power Query)
-
-A fully dynamic date table was created to support time-intelligence.
 
 = List.Dates(#date(2023,01,01), 731, #duration(1,0,0,0))
 
@@ -71,23 +87,22 @@ A fully dynamic date table was created to support time-intelligence.
 
 6. Data Modeling with Power Pivot
 
-Built relationships between fact table and calendar table.
+- Built relationships between fact and calendar tables.
 
-Optimized the model for fast and accurate calculations.
+- Optimized model for fast and accurate calculations.
 
 
-7. DAX Calculations (Custom Columns)
+
+7. DAX Calculations
 
 Age Group Classification
 
-
 =IF([Patient Age]>=70,"70-79",
-IF([Patient Age]>=60,"60-69",
-IF([Patient Age]>=45,"45-59",
-IF([Patient Age]>=30,"30-44",
-IF([Patient Age]>=15,"15-29",
-IF([Patient Age]>=5,"05-14","0-4"))))))
-
+ IF([Patient Age]>=60,"60-69",
+ IF([Patient Age]>=45,"45-59",
+ IF([Patient Age]>=30,"30-44",
+ IF([Patient Age]>=15,"15-29",
+ IF([Patient Age]>=5,"05-14","0-4"))))))
 
 
 Patient Timeliness Classification
@@ -100,72 +115,74 @@ Patient Timeliness Classification
 
 - Built pivot tables for each KPI.
 
-- Structured components for clarity and user-friendly navigation.
+- Created user-friendly layout with structured components.
 
 
 
 9. Chart Development & Formatting
 
-Created automated visuals including:
+- Created automated visuals including:
 
-Admission Status (Admitted vs Not Admitted)
+- Admission status
 
-Age Distribution
+- Patient satisfaction
 
-Gender Breakdown
+- Referral trends
 
-Timeliness % (patients seen within 30 minutes)
+- Patient age distributions
 
-Department Referral Analysis
-
-Sparkline trends for daily wait time, satisfaction, and patient volume
-
-
-10. Final Dashboard Development
-
-Integrated KPIs, charts, and slicers.
-
-Applied clean formatting for a professional, hospital-ready view.
-
-Ensured everything updates automatically when source data changes.
+- Timeliness performance
 
 
 
 
-🔧 Tools & Techniques Used
+📈 Key Insights
 
-Microsoft Excel
+- Identified delays in patient processing
 
-Power Query (Importing & Cleaning)
+- Found bottlenecks in specific departments
 
-Power Pivot (Data Modeling)
+- Highlighted age groups with highest ER visits
 
-DAX (Custom Calculations)
-
-Pivot Tables
-
-Charts & Visualizations
-
-Dashboard Layout & UX Optimization
+- Improved data refresh workflow
 
 
 
 
-📐 Methods Applied
+✅ Result & Conclusion
 
-Data Transformation
+This dashboard provides:
 
-ETL using Power Query
+- Transparent performance tracking
 
-Data Modeling
+- Faster decision-making
 
-DAX-Based Calculations
+- Improved patient experience
 
-Trend Analysis
+- Scalable solution for future datasets
 
-KPI Design
 
-Visual Storytelling
+
+
+📦 Tools & Technologies Used
+
+- Excel
+
+- Power Query
+
+- Power Pivot
+
+- DAX
+
+- Data Cleaning & Modeling
+
+- DAX-Based Calculations
+
+- Trend Analysis
+
+- KPI Design
+
+- Visual Storytelling
 
 
 
@@ -173,15 +190,15 @@ Visual Storytelling
 
 🔑 Key Insights
 
-Identified peak traffic days where wait times increased significantly.
+- Identified peak traffic days where wait times increased significantly.
 
-Certain age groups showed higher admission rates.
+- Certain age groups showed higher admission rates.
 
-Gender distribution remained balanced.
+- Gender distribution remained balanced.
 
-Timeliness metric revealed specific low-performance days.
+- Timeliness metric revealed specific low-performance days.
 
-Referral patterns highlighted departments with maximum incoming cases.
+- Referral patterns highlighted departments with maximum incoming cases.
 
 
 
@@ -193,13 +210,13 @@ The final Excel dashboard provides a clear, automated, and insight-driven view o
 
 Hospital administrators can now:
 
-Identify inefficiencies quickly
+- Identify inefficiencies quickly
 
-Track performance trends instantly
+- Track performance trends instantly
 
-Make accurate, data-backed decisions
+- Make accurate, data-backed decisions
 
-Improve patient experience and service quality
+- Improve patient experience and service quality
 
 
 
@@ -207,5 +224,5 @@ Improve patient experience and service quality
 Contact
 
 Krishna Jaiswal
-📩 Email: krishna250763@gmail.com
+📩 Email: krishna250763@gmail.com. 
 🔗 LinkedIn: www.linkedin.com/in/krishnaa07
