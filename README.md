@@ -117,4 +117,4 @@ It can be shared upon request for professional or academic evaluation.
 
 **Krishna Jaiswal**
 * **Email**: krishna250763@gmail.com
-* **LinkedIn**: [www.linkedin.com/in/krishnaa07](www.linkedin.com/in/krishnaa07)
+* **LinkedIn**: [www.linkedin.com/in/krishnaa07](https://www.linkedin.com/in/krishnaa07)
