@@ -106,6 +106,13 @@ The final Excel dashboard provides a clear, automated, and insight-driven view o
 
 ---
 
+## 🔒 Project File Information
+
+To ensure data confidentiality and protect the intellectual work involved in this project, the complete editable Excel dashboard has not been published publicly.
+It can be shared upon request for professional or academic evaluation.
+
+---
+
 ## 👤 Contact
 
 **Krishna Jaiswal**
